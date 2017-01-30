@@ -1,4 +1,7 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user!, except:[:index]
+
+
   # GET /tasks
   def index
     @tasks = Task.all

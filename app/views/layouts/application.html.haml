@@ -25,12 +25,12 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          = link_to "#", class: "navbar-brand" do
+          = link_to "/", class: "navbar-brand" do
             TaskApp
         #navbar.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li.active
-              = link_to "Home", "#"
+              = link_to "Home", "/"
           %ul.nav.navbar-nav.navbar-right
             %form.navbar-form.navbar-left
             - if user_signed_in?
@@ -50,3 +50,16 @@
             %span.sr-only Close
           = msg
       = yield
+
+    %nav.navbar.navbar-fixed-bottom{role: "navigation"}
+      .container
+        %ul.bd-footer-links
+          .col-sm-6
+            %h5 Hamilton's App . . . 2017
+          .col-sm-6.social-icons
+            %a{:href => "https://www.facebook.com/ham.clark.5"}
+              %i.fa.fa-facebook
+            %a{:href => "https://github.com/dhclark2"}
+              %i.fa.fa-github
+            %a{:href => "https://www.linkedin.com/in/hamilton-clark-38ba8526/"}
+              %i.fa.fa-linkedin
