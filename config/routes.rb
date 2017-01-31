@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
 
-  root "tasks#index"
-
   devise_for :users
   resources :tasks, :users
+
+  root "tasks#index"
+
+  get "pages/about"
+
+  get "pages/help"
+
+  get "pages/landing"
 
 end

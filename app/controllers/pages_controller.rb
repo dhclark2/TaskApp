@@ -1,4 +1,6 @@
-class PagesController < ApplicationRecord
+class PagesController < ApplicationController
 
+  def task
+  end
 
 end
